@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Many Buttons</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        height: 400px;
+    }
+    button{
+        position: absolute;
+        top: 525px;
+    }
+
+</style>
+
+<body>
+    <h2>Click the buttons to see images of Atlanta urbanization in various years
+    </h2>
+    <h3>Legend: white area is urbanized area. Black area is relatively nonurban.</h3>
+
+    <img id = '2019' src="./2019.png" alt="">
+    <img id = '2017' src="./2017.png" alt="">
+    <img id = '2015' src="./2015.png" alt="">
+    <img id = '2013' src="./2013.png" alt="">
+    <img id = '2010' src="./2010.png" alt="">
+
+    <button style="left: 400px" onclick="myFunction('2019')">2019</button>
+    <button style="left: 300px" onclick="myFunction('2017')">2017</button>
+    <button style="left: 200px" onclick="myFunction('2015')">2015</button>
+    <button style="left: 100px" onclick="myFunction('2013')">2013</button>
+    <button style="left: 10px" onclick="myFunction('2010')">2010</button>
+  
+</body>
+<script>
+    function myFunction(id){
+        var imgs = document.getElementsByTagName('img')
+        for(var i =0; i < imgs.length; i++){imgs[i].style.visibility='hidden'}
+        var daImg = document.getElementById(id)
+        daImg.style.visibility = 'visible'
+        console.log(daImg)
+    }
+
+</script>
+
+</html>
